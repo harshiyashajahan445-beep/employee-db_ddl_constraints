@@ -1,28 +1,13 @@
-# employee-db_ddl_constraints
-DDL Commands, Alterations, and Constraints
-# Employee Database (MySQL DDL & Relational Constraints)
+# Employee Database Management System (MySQL)
 
-This project focuses on designing and implementing a relational schema for an employee management system using MySQL Workbench. It demonstrates fundamental  (DDL) operations, structure modifications, and constraints.
+This repository contains a two-part database project built using MySQL Workbench.
 
 ## Repository Contents
 
-* **`mysql_assignment1.sql`**: Covers initial table creations, structural updates using `ALTER`, column renames, table truncation, and `DROP` commands.
-* **`MySQL_Assignment_Part2.sql`**: Contains the complete schema recreation featuring relational constraints (`PRIMARY KEY`, `FOREIGN KEY`, `UNIQUE`, `CHECK`, and `DEFAULT`).
+* **`MYSQL_Assignment_1.sql`**: Part 1 — Database schema creation, table definitions (`departments`, `location`, `employees`), DDL statements, and data integrity constraints (Primary Keys, Foreign Keys, ENUMs, CHECK constraints).
+* **`MYSQL_Assignment_2.sql`**: Part 2 — Data manipulation and analysis including filtering (`WHERE`), distinct selection, aliasing, sorting (`ORDER BY`), limiting (`LIMIT`), aggregations (`SUM`, `MIN`, `AVG`), grouping (`GROUP BY`, `HAVING`), and relational joins (`INNER JOIN`, `LEFT JOIN`, `RIGHT JOIN`).
 
-## Database Structure & Schema
-The schema connects three central entities:
-
-1. **`departments`**: Holds department records with non-null and unique name requirements.
-2. **`location`**: Manages office locations using sequential auto-incrementing identifiers.
-3. **`employees`**: Stores core personnel details, enforcing age limits (`>= 18`) and automatic current-date entries for joining dates.
-
-### Implemented Relational Logic
-* **Foreign Key References**: Establishes links from `employees.department_id` and `employees.location_id` to their respective parent tables.
-* **Data Validation**: Enforces column-level data integrity constraints directly within table creation scripts.
-
-## Setup & Execution
-
-1. Launch **MySQL Workbench** and establish a local database connection.
-2. Execute `mysql_assignment1.sql` sequentially to review basic schema operations and modifications.
-3. Run `MySQL_Assignment_Part2.sql` to generate the finalized relational schema with full constraint enforcement.
-4. Run `DESCRIBE employees;` to inspect field definitions and primary/foreign key mappings.
+## How to Run
+1. Run `MYSQL_Assignment_1.sql` to initialize the database and tables.
+2. Insert the sample employee data into the tables.
+3. Run `MYSQL_Assignment_2.sql` to execute the data querying operations.
